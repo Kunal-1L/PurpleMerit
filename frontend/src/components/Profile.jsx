@@ -126,6 +126,7 @@ const Profile = () => {
           value={formData.new_email}
           onChange={handleChange}
         />
+        <div className={style.role}>Role: {profile.role}</div>
       </div>
 
       {/* PASSWORD */}

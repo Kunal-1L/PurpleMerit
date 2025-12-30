@@ -41,6 +41,13 @@
   border-color: #6a0dad;
 }
 
+.role{
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: #444;
+    
+}
+
 .actions {
   display: flex;
   gap: 12px;
