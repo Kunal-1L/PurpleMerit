@@ -213,52 +213,6 @@ app.put("/update-profile", verifyToken, async (req, res) => {
   }
 });
 
-// API to change password
-app.put("/change-password", verifyToken, async (req, res) => {
-  try {
-    const { userId, old_password, new_password } = req.body;
-    // Find user by ID
-    const user = await Users.findById(userId);
-    if (!user) {
-      return res.status(404).json({ message: "User not found" });
-    } else {
-      // Compare old password
-      const isMatch = await bcrypt.compare(old_password, user.user_password);
-      if (!isMatch) {
-        return res.status(400).json({ message: "Old password is incorrect" });
-      }
-
-      // Hash new password
-      const hashedNewPassword = await bcrypt.hash(new_password, 10);
-      user.user_password = hashedNewPassword;
-      user.updated_at = new Date();
-      await user.save();
-
-      res.status(200).json({ message: "Password changed successfully" });
-    }
-  } catch (error) {
-    console.error("Change Password Error:", error);
-    res.status(500).json({ message: "Internal server error" });
-  }
-});
-
-// API to get user details
-app.get("/user/:id", verifyToken, async (req, res) => {
-  try {
-    const userId = req.params.id;
-    // Find user by ID
-    const user = await Users.findById(userId).select("-user_password");
-    if (!user) {
-      return res.status(404).json({ message: "User not found" });
-    } else {
-      res.status(200).json({ user });
-    }
-  } catch (error) {
-    console.error("Get User Error:", error);
-    res.status(500).json({ message: "Internal server error" });
-  }
-});
-
 // API to get all users (admin only) paginated
 app.get("/users", verifyToken, async (req, res) => {
   try {
