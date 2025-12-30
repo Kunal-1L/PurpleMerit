@@ -1,0 +1,117 @@
+.adminContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9f7ff, #f1ecff);
+  padding: 100px 40px 40px;
+}
+
+.adminCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 36px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
+}
+
+.heading {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #4b2aad;
+}
+
+.subText {
+  margin-top: 6px;
+  margin-bottom: 26px;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Table */
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.userTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.userTable thead {
+  background: #f1ecff;
+}
+
+.userTable th,
+.userTable td {
+  padding: 14px 16px;
+  text-align: left;
+}
+
+.userTable th {
+  font-weight: 600;
+  color: #4b2aad;
+}
+
+.userTable tr {
+  border-bottom: 1px solid #eee;
+}
+
+.userTable tbody tr:hover {
+  background: #faf9ff;
+}
+
+/* Role badge */
+.roleBadge {
+  padding: 5px 12px;
+  background: #f1ecff;
+  color: #4b2aad;
+  border-radius: 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Status */
+.activeStatus {
+  color: #1e7f43;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.inactiveStatus {
+  color: #b42318;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Action button */
+.actionBtn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #4b2aad;
+  color: #ffffff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.actionBtn:hover {
+  background: #3a1f8f;
+}
+
+.emptyText {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .adminContainer {
+    padding: 90px 16px 24px;
+  }
+
+  .userTable th,
+  .userTable td {
+    padding: 12px 10px;
+  }
+}

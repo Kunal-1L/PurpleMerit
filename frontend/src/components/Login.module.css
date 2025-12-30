@@ -1,0 +1,113 @@
+.loginContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9f7ff, #f1ecff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 72px; /* navbar space */
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 32px 36px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.heading {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #4b2aad;
+  text-align: center;
+}
+
+.subText {
+  margin-top: 6px;
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.inputGroup input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #d6ccff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.inputGroup input:focus {
+  border-color: #4b2aad;
+}
+
+/* Login Button */
+.loginBtn {
+  margin-top: 10px;
+  padding: 10px;
+  background: #4b2aad;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.loginBtn:hover {
+  background: #3a1f8f;
+}
+
+.loginBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.footerText {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footerText a {
+  color: #4b2aad;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.footerText a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,42 @@
+.homeContainer {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #f9f7ff, #f1ecff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Page heading */
+.homeContainer h2 {
+  margin-top: 100px; /* space for Navbar */
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #4b2aad; /* PurpleMerit theme */
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* Subtle animation */
+.homeContainer h2 {
+  animation: fadeSlide 0.6s ease-out forwards;
+}
+
+.homeContainer p{
+    margin-top: 12px;
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    max-width: 600px;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

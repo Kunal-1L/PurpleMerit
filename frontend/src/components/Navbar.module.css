@@ -1,0 +1,83 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 72px;
+  padding: 0 40px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #4b2aad;
+  cursor: pointer;
+}
+
+/* Right side buttons */
+.navActions {
+  display: flex;
+  gap: 14px;
+}
+
+/* Common button style */
+.navActions button {
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Login */
+.loginBtn {
+  background: transparent;
+  border: 1px solid #4b2aad;
+  color: #4b2aad;
+}
+
+.loginBtn:hover {
+  background: #4b2aad;
+  color: #ffffff;
+}
+
+/* Signup */
+.signupBtn {
+  background: #4b2aad;
+  border: none;
+  color: #ffffff;
+}
+
+.signupBtn:hover {
+  background: #3a1f8f;
+}
+
+/* Logout */
+.logoutBtn {
+  background: #f5f3ff;
+  border: 1px solid #d6ccff;
+  color: #4b2aad;
+}
+
+.logoutBtn:hover {
+  background: #e8e2ff;
+}
+
+/* Profile */
+.profileBtn {
+  background: #f5f3ff;
+  border: 1px solid #d6ccff;
+  color: #4b2aad;
+}
+
+.profileBtn:hover {
+  background: #e8e2ff;
+}
